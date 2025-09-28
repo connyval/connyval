@@ -8,29 +8,29 @@ I am a Systems Engineer and a proactive technology professional with strong expe
 
 ## **Technologies, Tools & Skills**
 
--	Cloud: AWS Cloud - AWS Core Services
+-	Cloud: AWS Cloud, Core Services
 -	Databases and CMS: MS SqlServer, Drupal
 -	Devops skill : scripting bash , python, Docker, Ansible
--	AI and Automations: Bedrock, N8N, Make tools integrate Agents
+-	AI and Automations: AWS Bedrock, Amazon Q, N8N, Make tools integrate Agents, MCP Server
 -	Security: AWS cloud security service (VPC, EC2, BLB, CDFRONT, ROU,ACM, AIM, WAF/SHIELD ADV, CLOUDWT, BILL-COST_EXP, CDTRAIL, SECHUB, GDUTY, INSPECT), QSIGHT, CALC PAS-IAS-SAS)
 
-## AWS Cloud Projects**
+## AWS Cloud Projects
 
--	Professional Websit
+-	Professional Website
 -	Application N8N deployed in docker container
 
-## Generative IA**
+## Generative IA
 
 -	MCP Server for IA Chat with Amazon Q Cli / VsCODE improving my DEV journey
 
 - AI Assistant in VsCODE integrated with AWS Bedrock
 
-## Habilidades DEVOPS**
+## Habilidades DEVOPS
 
--	Script - BASH: Gist o snippets
+-	Script BASH: Gist o snippets
 -	PYTHON
 
-## Automatations**
+## Automatations
 
 - Extraction data from PDF with AI-powered automated process
 - Automations process and IA Generative Tools as a MAKE
@@ -40,19 +40,19 @@ I am a Systems Engineer and a proactive technology professional with strong expe
 I invite you to [contact me](https://ocvpprofessional.cloud)
 
 > [!NOTE]
-> I hope, my showcase can help ypu to groeming your knowledge, too!
+> I hope, my portfolio can help you to growm your knowledge, too!
 
 > [!TIP]
-> Always, to put in practice everything that you learn.
+> Always, in puttting in practice everything that you learn.
 
 > [!IMPORTANT]
-> Give me any feedback or just to contact me!
+> Give me any feedback or just contact me!
 
 > [!WARNING]
-> Urgent, dont stop learning.
+> Urgent, don't stop learning.
 
 > [!CAUTION]
-> The unique risks is not to become to be better everyday.
+> The unique risks is not to be better, everydays.
 
 
 
