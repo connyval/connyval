@@ -22,4 +22,6 @@ An amazing tool! I implemented MCP to interact with an AI Chat using Sonnet mode
 -   The MCP server was successfully integrated for use via Terminal and VSCode.
 -   Finally, it was activated through AWS Q CLI in Chat, enabling natural language queries to the AI for AWS cost analysis, management, and optimization.
 
+### Technical Desing:
+
 ![Technical Desing](https://ocvpprofessional.cloud/wp-content/uploads/2025/08/aws_q_cli.png)

@@ -20,5 +20,7 @@ Read (OCR scan) a PDF document containing shipping information, where an automat
 -   Then, the OpenAI LLM model (GPT-4.o Mini 2024) is used to precisely extract the necessary data and structure it in JSON format, properly labeling each value.
 
 -   Finally, the structured JSON data is mapped and exported to GOOGLE SHEETS in order to cross-reference it with the business’s bank transactions and maintain control over shipments delivered to customers.”
-- 
+
+### Technical Desing:
+
 ![Technical Desing](https://ocvpprofessional.cloud/wp-content/uploads/2025/07/1_Escenario-MAKE-2048x712.png)

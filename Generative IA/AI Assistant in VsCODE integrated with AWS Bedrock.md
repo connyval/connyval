@@ -20,4 +20,6 @@ Currently, I integrated VsCode framework tool with Amazon Bedrock trought an Art
 -   The  _config.yaml_  file is then copied to the default assistants directory of the CONTINUE module on the local machine—in this case, on Mac.
 -   With this setup, a new assistant is enabled and connected to AWS Bedrock within the VS Code interface and workspace, providing support and guidance on AWS Cloud technical information
 
+### Technical Desing:
+
 ![Technical Desing](https://ocvpprofessional.cloud/wp-content/uploads/2025/08/vscode-ia2.png)

@@ -24,6 +24,6 @@ The N8N application was deployed to create automations and integrations with Art
 -   Configured (2) Target groups in Application Load Balancer, because there are main proffesional website and N8N aplication in the same hosting.
 -   Finally, Application Load Balancer serves traffic to two websites by https protocols without conflict.
 
-[Application N8N deployed in Docker container](https://ocvpprofessional.cloud/wp-content/uploads/2025/08/APP_N8N_LBL.png)
+### Technical Desing:
 
 ![Technical Desing](https://ocvpprofessional.cloud/wp-content/uploads/2025/08/APP_N8N_LBL.png)
