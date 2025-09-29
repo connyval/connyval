@@ -1,24 +1,25 @@
-### AI Assistant in VsCODE integrated with AWS Bedrock
+### MCP Server for IA Chat with Amazon Q Cli / VsCODE improving my DEV journey
 
 ### Objetive:
+First, what is  **MCP Server?**  
+“MCP, or Model Context Protocol, is an open-source protocol developed by Anthropic and supported by AWS. It acts as a ‘universal translator’ for artificial intelligence. AWS has integrated MCP to enable AI applications to access and use AWS tools, databases, and services. It operates with a client-server architecture, where clients (such as AI assistants) connect to MCP servers (which expose AWS data and services), allowing language models to interact securely and efficiently with the AWS environment”.
 
-Currently, I integrated VsCode framework tool with Amazon Bedrock trought an Artificial Inteligent Model, that it will allow me working and getting technical help by my personal IA assistant in the same workspace in VSCode. Additionaly count with a professional teacher or mentorship to learning more about AWS Cloud.
+An amazing tool! I implemented MCP to interact with an AI Chat using Sonnet models. Specifically, I used MCP for cost analysis and optimization, enabling me to investigate my resources and workloads, understand and analyze costs in detail, identify potential technical optimizations, and determine key aspects to monitor. This has become my powerful AI assistant for managing and controlling AWS cloud expenses.
 
 ### Application Architecture:
 
--   VsCode Framework Tool
--   Amazon Bedrock – Amazon provider – Nova Micro Model
--   Amazon IAM – user, permission, role
+-   AWS MCP Server – Sonnet Model
+-   AWS Q Cli and VsCode Framework Tool
+-   Amazon IAM: user, role, permissions to Cost Explorer API
 
 ### Final Implementation:
 
--   In the Amazon account, the Bedrock service is enabled using the Nova Micro model, taking both the model name and ID.
--   In the IAM service, a user is created with a profile for CLI (command line) connection, granting permission to invoke the Bedrock AI model. An Access Key is generated for this user.
--   In the VS Code console, the CONTINUE extension is installed and activated, which enables the connection and creation of assistants.
--   The AWS user is configured as a role within VS Code to allow connectivity to AWS.
--   The  _config.yaml_  file is verified, ensuring it contains the model details, parameters, and pre-defined system prompt for the assistant.
--   The  _config.yaml_  file is then copied to the default assistants directory of the CONTINUE module on the local machine—in this case, on Mac.
--   With this setup, a new assistant is enabled and connected to AWS Bedrock within the VS Code interface and workspace, providing support and guidance on AWS Cloud technical information
+-   Initially, based on the AWS MCP Servers guide, the MCP for Cost Explorer analysis was selected.
+-   Amazon Q CLI was installed to enable functionalities, dependencies, and components on the local Mac machine.
+-   In the AWS account, a user and role were created, granting permissions for the Cost Explorer API to allow the user to connect to account resources.
+-   A profile was then created with the user’s credentials, including the access key and secret key, for use in the Terminal and VsCode.
+-   The JSON file located at /.aws/amazonq/mcp.json on the local machine was configured with the selected MCP server code, including the assigned user for connection to the AWS account.
+-   The MCP server was successfully integrated for use via Terminal and VSCode.
+-   Finally, it was activated through AWS Q CLI in Chat, enabling natural language queries to the AI for AWS cost analysis, management, and optimization.
 
-![Technical Desing](https://ocvpprofessional.cloud/wp-content/uploads/2025/08/vscode-ia2.png)
-
+![Technical Desing](https://ocvpprofessional.cloud/wp-content/uploads/2025/08/aws_q_cli.png)

@@ -1,6 +1,6 @@
 # Hello! , I'm **Constanza Valiente**  👩🏻‍💻
 
-![mi logo]( https://ocvpprofessional.cloud/wp-content/uploads/2025/07/Mysite.png)
+![mi logo](https://ocvpprofessional.cloud/wp-content/uploads/2025/09/titulo_cv.png)
 
 This growing portfolio aims to showcase my professional profile, built on knowledge, experience, continuous learning, and currently focused on projects related to AWS Cloud, automation, Generative AI, migration techniques, and best practices, all framed within standards and frameworks such as the Digital Government Strategy.
 
