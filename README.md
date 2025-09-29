@@ -45,7 +45,7 @@ I invite you to [contact me](https://ocvpprofessional.cloud)
 > I hope, my portfolio can help you to growm your knowledge, too!
 
 > [!TIP]
-> Always, in puttting in practice everything that you learn.
+> Always put into practice everything you learn.
 
 > [!IMPORTANT]
 > Give me any feedback or just contact me!
@@ -55,6 +55,3 @@ I invite you to [contact me](https://ocvpprofessional.cloud)
 
 > [!CAUTION]
 > The unique risks is not to be better, everydays.
-
-
-
