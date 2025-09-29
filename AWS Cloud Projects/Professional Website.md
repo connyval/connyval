@@ -23,4 +23,4 @@ This website is based on my professional experience and was implemented using AW
 -   Configured secure routing via Amazon Application Load Balancer, using the primary domain and HTTPS protocol. This setup also masked the public IP address, enhancing the security and privacy of the website.
 -   Finally, launched the professional website in production using the latest version of WordPress CMS, applying a high-quality theme to reflect a strong professional image and brand online.
 
-[Professional Website ](https://ocvpprofessional.cloud/wp-content/uploads/2025/07/Mysite.png)
+![Professional Website ](https://ocvpprofessional.cloud/wp-content/uploads/2025/07/Mysite.png)

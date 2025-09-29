@@ -6,4 +6,4 @@ Hand on-lab: Using tools like MAKE and N8N will allow me to create and deploy wo
 
 N8N service was implemented under AWS cloud architecture for my own professional work in automation and AI Agents.
 
-[Automatation in MAKE](https://ocvpprofessional.cloud/wp-content/uploads/2025/07/make3.png)
+![Automatation in MAKE](https://ocvpprofessional.cloud/wp-content/uploads/2025/07/make3.png)

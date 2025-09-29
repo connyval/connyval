@@ -26,4 +26,4 @@ The N8N application was deployed to create automations and integrations with Art
 
 [Application N8N deployed in Docker container](https://ocvpprofessional.cloud/wp-content/uploads/2025/08/APP_N8N_LBL.png)
 
-[Technical Desing](https://ocvpprofessional.cloud/wp-content/uploads/2025/08/APP_N8N_LBL.png)
+![Technical Desing](https://ocvpprofessional.cloud/wp-content/uploads/2025/08/APP_N8N_LBL.png)

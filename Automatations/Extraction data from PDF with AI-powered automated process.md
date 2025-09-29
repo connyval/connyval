@@ -21,4 +21,4 @@ Read (OCR scan) a PDF document containing shipping information, where an automat
 
 -   Finally, the structured JSON data is mapped and exported to GOOGLE SHEETS in order to cross-reference it with the business’s bank transactions and maintain control over shipments delivered to customers.”
 - 
-[Extracta Data from PDF](https://ocvpprofessional.cloud/wp-content/uploads/2025/07/1_Escenario-MAKE-2048x712.png)
+![Extracta Data from PDF](https://ocvpprofessional.cloud/wp-content/uploads/2025/07/1_Escenario-MAKE-2048x712.png)
