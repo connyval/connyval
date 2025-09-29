@@ -16,23 +16,23 @@ I am a Systems Engineer and a proactive technology professional with strong expe
 
 ## AWS Cloud Projects
 
--	[Professional Website](AWS Cloud Projects/Professional Website.md)
--	[Application N8N deployed in docker container](AWS Cloud Projects/Application N8N deployed in docker container.md)
+[*Professional Website](AWS Cloud Projects/Professional Website.md)
+[*Application N8N deployed in docker container](AWS Cloud Projects/Application N8N deployed in docker container.md)
 
 ## Generative IA
 
--	[MCP Server for IA Chat with Amazon Q Cli / VsCODE improving my DEV journey](Generative IA/MCP Server for IA Chat with Amazon Q Cli.md)
+[*MCP Server for IA Chat with Amazon Q Cli / VsCODE improving my DEV journey](Generative IA/MCP Server for IA Chat with Amazon Q Cli.md)
 
-- [AI Assistant in VsCODE integrated with AWS Bedrock](Generative IA/AI Assistant in VsCODE integrated with AWS Bedrock.md)
+[*AI Assistant in VsCODE integrated with AWS Bedrock](Generative IA/AI Assistant in VsCODE integrated with AWS Bedrock.md)
 
 ## Habilidades DEVOPS
 
--	[Script BASH: Gist o snippets](Habilidades DEVOPS/Script BASH: Gist o snippets.md)
+[*Script BASH: Gist o snippets](Habilidades DEVOPS/Script BASH: Gist o snippets.md)
 
 ## Automatations
 
-- [Extraction data from PDF with AI-powered automated process](Automatations/Extraction data from PDF with AI-powered automated process.md) 
-- [Automations process and IA Generative Tools as a MAKE](Automatations/Automations process and IA Generative Tools as a MAKE.md)
+[*Extraction data from PDF with AI-powered automated process](Automatations/Extraction data from PDF with AI-powered automated process.md) 
+[*Automations process and IA Generative Tools as a MAKE](Automatations/Automations process and IA Generative Tools as a MAKE.md)
   
 ## Contact me!
 
