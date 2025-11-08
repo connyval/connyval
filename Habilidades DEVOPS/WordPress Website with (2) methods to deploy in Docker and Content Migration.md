@@ -8,12 +8,12 @@ Adicional, explorando el apoyo del Asistente de Inteligencia Artificial Amazon Q
 El sitio web se compone de (2) capas:  BASES DE DATOS - FRONTEND
 
 **CONTENEDORES:**
-- 1. BASE DE DATOS: MYSQL 
+- BASE DE DATOS: MYSQL 
 	Contenedor: database   puerto:3306 (puerto interno contenedor)
-- 2. FRONTEND:  PHP - APP Legacy WORDPRESS
+- FRONTEND:  PHP - APP Legacy WORDPRESS
 	Contenedor: wordpress     puerto:80 (puerto interno contenedor)
 
-**PRE-REQUSITOS:**
+**PRE-REQUISITOS:**
 En un ambiente local (tu maquina) necesitas;
 
 -   Motor de DOCKER (engine docker) para crear esta solución de contenedores, entonces se puedes instalar y usar Docker Desktop o OrbStack  
@@ -26,23 +26,24 @@ Exiten, dos formas de implementar:
 
 **A. Implementando cada componente, por aparte**
 
--   Crear la RED en ambiente docker, que va a relacionar los (2) contenedores
+-   Crear la **RED en ambiente docker**, que va a relacionar los (2) contenedores
 ```
 > docker network create mysitewp-network
 > docker network list
 ```
--   Crear archivo dockerfile BASE DE DATOS(MYSQL) y FRONTEND (PHP -WORDPRESS), por aparte
+-   Crear archivo **dockerfile BASE DE DATOS(MYSQL) y FRONTEND (PHP -WORDPRESS)**, por aparte
 
 
--   Crear la imagen  a partir del archivo dockerfile para cada uno. Se ubica en cada directorio del proyecto 
+-   Crear la **IMAGEN  a partir del archivo dockerfile** para cada uno. Se ubica en cada directorio del proyecto 
 ```
 # para BASE DATOS
-docker build -t ima-mysite-db .  
+> docker build -t ima-mysite-db .  
 # para APP WORDPRESS   
 > docker build -t ima-mysite-wp .    
 ```
 
-#Crear o correr (RUN) los contenedores con todos los parámetros
+-   Crear o **correr (RUN) los contenedores** con todos los parámetros
+
 **para BASE DATOS**
 ```
 > docker run -d \
@@ -68,58 +69,35 @@ docker build -t ima-mysite-db .
   -v $(pwd)/wordpress/entrypoint.sh:/usr/local/bin/entrypoint.sh \
   -v $(pwd)/wordpress/php.ini:/usr/local/etc/php/conf.d/custom.ini \
   ima-mysite-wp
+  ```
 
-
-**B.  Implementando a partir de la ejecución de un archivo docker-compose.yaml** 
-
-En este caso, **se omite este punto. No se necesita crear RED de docker**. En este caso, se realiza a travez de archivo docker-compose.yaml
-
--   Crear archivo dockerfile BASE DE DATOS(MYSQL) y FRONTEND (PHP -WORDPRESS), por aparte
--   Crear el archivo docker-compose.yaml, el cual define la relacion y la dependencia de los contenedores entre si, para implementar los contenedores 
-
-###  Implementation
-
-**A. Implementando cada componente, por aparte**
-
-Crear la RED en Docker. Este punto solo aplica al punto A. Implementando cada componente, por aparte
-```
-docker network create mysitewp-network
-docker network list
-```
-#Crear imágenes, se ubica en cada directorio del proyecto 
-```
-# para BASE DATOS
-docker build -t ima-mysite-db .  
-# para APP WORDPRESS   
-> docker build -t ima-mysite-wp .    
-```
 **B.  Implementando a partir de la ejecución de un archivo docker-compose.yaml**
 
-*1. Crear los dockerfiles*
-
+** Crear los dockerfiles**
 -   BASE DE DATOS(MYSQL):  En la sub carpeta Database, crear un archivo para dockerfile, el cual tiene los siguientes comandos y comentarios
 
 -   FRONTEND (PHP -WORDPRESS):  En la sub carpeta wordpress, crear un archivo para dockerfile, el cual tiene los siguientes comandos y comentarios
 
-*2. Crear el archivo DOCKER-COMPOSE (docker-compose.ymal)*, el cual define la relación y la dependencia de los contenedores entre si, para implementarlos
+-   Crear el **archivo DOCKER-COMPOSE (docker-compose.ymal)**, el cual define la relación y la dependencia de los contenedores entre si, para implementarlos
 
-#Ejecutar solo docker-compose, que se basa en lo dockerfile creados anteriormente para Bases de datos/aplicación wordpres
+-   **Ejecutar solo docker-compose**, que se basa en lo dockerfile creados anteriormente para Bases de datos/aplicación wordpres
 ```
 > docker-compose up -d
 ```
--   Se agrega en este proyecto los archivos entrypoint.sh y php.ini para configurar las variables de entorno a nivel de Wordpress que permiten ampliar la configuración de PHP, con el fin de usar el plug-in de wordpress llamado ALL-in-One WP Migration (instalar el modulo en wordpress) 
+-   Se agrega en este proyecto los **archivos entrypoint.sh y php.ini** para configurar las variables de entorno a nivel de Wordpress que permiten ampliar la configuración de PHP, con el fin de usar el **plug-in de wordpress llamado ALL-in-One WP Migration** (instalar el modulo en wordpress) 
 
 -   El plug-in ALL-in-One WP Migration permite restablecer o importar un archivo tipo backup de sitio wordpress (ejemplo: mysite-cloud.wpress)  y migrar el contenido a esta nueva infraestructura local implementada con Docker. 
 
-
-Finalmente, se implementa el docker-compose.ymal con comando docker-compose up -d
-
+Finalmente, se **implementa el docker-compose.ymal** con comando 
+```
+docker-compose up -d
+```
 Para navegarlo a través de localhost puerto 8080
 ```
 http://localhost:8080/
 ```
 
-*3. Migracion Contenido Sitio WP*, anterior 
+**Migracion Contenido Sitio WP**, anterior 
 
 Una vez, activo el sitio http://localhost:8080/, se configura con usuario y password administrador de worpress.
 
