@@ -108,9 +108,9 @@ EXPOSE 80
 **B.  Implementando a partir de la ejecución de un archivo docker-compose.yaml**
 
 **Crear los dockerfiles**
--   BASE DE DATOS(MYSQL):  En la sub carpeta Database, crear un archivo para dockerfile, el cual tiene los siguientes comandos y comentarios
+-   BASE DE DATOS(MYSQL):  En la sub carpeta Database, crear un archivo para dockerfile. (igual al punto anterior)
 
--   FRONTEND (PHP -WORDPRESS):  En la sub carpeta wordpress, crear un archivo para dockerfile, el cual tiene los siguientes comandos y comentarios
+-   FRONTEND (PHP -WORDPRESS):  En la sub carpeta wordpress, crear un archivo para dockerfile. (igual al punto anterior)
 
 -   Crear el **archivo DOCKER-COMPOSE (docker-compose.yaml)**, el cual define la relación y la dependencia de los contenedores entre si, para implementarlos
 
@@ -154,10 +154,6 @@ services:
 volumes:
   db_data:
   wp_data:
-```
--   **Ejecutar solo docker-compose**, que se basa en lo dockerfile creados anteriormente para Bases de datos/aplicación wordpres
-```
-> docker-compose up -d
 ```
 -   Se agrega en este proyecto los **archivos entrypoint.sh y php.ini** para configurar las variables de entorno a nivel de Wordpress que permiten ampliar la configuración de PHP, con el fin de usar el **plug-in de wordpress llamado ALL-in-One WP Migration** (instalar el modulo en wordpress) 
 
@@ -211,7 +207,7 @@ Una vez, activo el sitio http://localhost:8080/, se configura con usuario y pass
 
 -   Se carga **archivo mysite-cloud.wpress**, donde se comprueba que la variables de entorno y para ampliar configuración de PHP (archivos entrypoint y php.ini), se ejecutaron y serán persistentes en el despliegue de los contenedores docker de esta solución.
 
-Quedando migrado el sitio deplegado en contenedores en este caso, en ambiente localhost 
+Quedando migrado el sitio deplegado en contenedores en este caso, en ambiente localhost. exitosamente !!.
 
 **Adicionales:**
 
