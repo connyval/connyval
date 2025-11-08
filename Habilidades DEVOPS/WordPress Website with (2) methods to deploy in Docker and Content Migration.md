@@ -6,96 +6,100 @@ Adicional, explorando el apoyo del Asistente de Inteligencia Artificial Amazon Q
 
 Este laboratorio, contempla:
 
-***ESTRUCTURA**
+**ESTRUCTURA:**
 El sitio web se compone de (2) capas:  BASES DE DATOS - FRONTEND
 
-*CONTENEDORES:*
---1 BASE DE DATOS: MYSQL 
+CONTENEDORES:
+-   1. BASE DE DATOS: MYSQL 
 	Contenedor: database   puerto:3306 (puerto interno contenedor)
---2 FRONTEND:  PHP - APP Legacy WORDPRESS
+-   2. FRONTEND:  PHP - APP Legacy WORDPRESS
 	Contenedor: wordpress     puerto:80 (puerto interno contenedor)
 
-*PRE-REQUSITOS:*
+**PRE-REQUSITOS:**
 En un ambiente local (tu maquina) necesitas;
 
--Motor de DOCKER (engine docker) para crear esta solución de contenedores, entonces se puedes instalar y usar Docker Desktop o OrbStack  
+-   Motor de DOCKER (engine docker) para crear esta solución de contenedores, entonces se puedes instalar y usar Docker Desktop o OrbStack  
 
--Preferiblemente,  usar una Interfaz (IDE) de desarrollo como VSCODE. Si no puede usar tu consola o terminal para interactuar con la shell (linea de comando)
+-   Preferiblemente,  usar una Interfaz (IDE) de desarrollo como VSCODE. Si no puede usar tu consola o terminal para interactuar con la shell (linea de comando)
 
--Crear un carpeta para tu proyecto y abrir o relacionar como workspace en VSCODE, con una subcarpeta para wordpress y otra para base de datos. Posterior, crearemos los demás archivos 
+-   Crear un carpeta para tu proyecto y abrir o relacionar como workspace en VSCODE, con una subcarpeta para wordpress y otra para base de datos. Posterior, crearemos los demás archivos 
 
 ### Application Architecture:
 Exiten, dos formas de implementar:
 
 **A. Implementando cada componente, por aparte**
 
--Crear la RED en ambiente docker, que va a relacionar los (2) contenedores
--Crear archivo dockerfile BASE DE DATOS(MYSQL) y FRONTEND (PHP -WORDPRESS), por aparte
--Crear la imagen  a partir del archivo dockerfile para cada uno
+-   Crear la RED en ambiente docker, que va a relacionar los (2) contenedores
+-   Crear archivo dockerfile BASE DE DATOS(MYSQL) y FRONTEND (PHP -WORDPRESS), por aparte
+-   Crear la imagen  a partir del archivo dockerfile para cada uno
 Construir o correr el contenedor a partir de la imagen con parámetros requeridos
 
 **B.  Implementando a partir de la ejecución de un archivo docker-compose.yaml** 
 
 En este caso, **se omite este punto. No se necesita crear RED de docker**. En este caso, se realiza a travez de archivo docker-compose.ymal
 
--Crear archivo dockerfile BASE DE DATOS(MYSQL) y FRONTEND (PHP -WORDPRESS), por aparte
--Crear el archivo docker-compose.ymal, el cual define la relacion y la dependencia de los contenedores entre si, para implementar los contenedores 
+-   Crear archivo dockerfile BASE DE DATOS(MYSQL) y FRONTEND (PHP -WORDPRESS), por aparte
+-   Crear el archivo docker-compose.ymal, el cual define la relacion y la dependencia de los contenedores entre si, para implementar los contenedores 
 
 ###  Implementation
 
 **A. Implementando cada componente, por aparte**
 
 Crear la RED en Docker. Este punto solo aplica al punto A. Implementando cada componente, por aparte
-
->docker network create mysitewp-network
->docker network list
-
+```
+docker network create mysitewp-network
+docker network list
+```
 **B.  Implementando a partir de la ejecución de un archivo docker-compose.yaml**
 
 *1. Crear los dockerfiles*
 
--BASE DE DATOS(MYSQL):  En la sub carpeta Database, crear un archivo para dockerfile, el cual tiene los siguientes comandos y comentarios
+-   BASE DE DATOS(MYSQL):  En la sub carpeta Database, crear un archivo para dockerfile, el cual tiene los siguientes comandos y comentarios
 
--FRONTEND (PHP -WORDPRESS):  En la sub carpeta wordpress, crear un archivo para dockerfile, el cual tiene los siguientes comandos y comentarios
+-   FRONTEND (PHP -WORDPRESS):  En la sub carpeta wordpress, crear un archivo para dockerfile, el cual tiene los siguientes comandos y comentarios
 
 *2. Crear el archivo DOCKER-COMPOSE (docker-compose.ymal)*, el cual define la relación y la dependencia de los contenedores entre si, para implementarlos
 
--Se agrega en este proyecto los archivos entrypoint.sh y php.ini para configurar las variables de entorno a nivel de Wordpress que permiten ampliar la configuración de PHP, con el fin de usar el plug-in de wordpress llamado ALL-in-One WP Migration (instalar el modulo en wordpress) 
+-   Se agrega en este proyecto los archivos entrypoint.sh y php.ini para configurar las variables de entorno a nivel de Wordpress que permiten ampliar la configuración de PHP, con el fin de usar el plug-in de wordpress llamado ALL-in-One WP Migration (instalar el modulo en wordpress) 
 
--El plug-in ALL-in-One WP Migration permite restablecer o importar un archivo tipo backup de sitio wordpress (ejemplo: mysite-cloud.wpress)  y migrar el contenido a esta nueva infraestructura local implementada con Docker. 
+-   El plug-in ALL-in-One WP Migration permite restablecer o importar un archivo tipo backup de sitio wordpress (ejemplo: mysite-cloud.wpress)  y migrar el contenido a esta nueva infraestructura local implementada con Docker. 
 
 Finalmente, se implementa el docker-compose.ymal con comando docker-compose up -d
 
 Para navegarlo a través de localhost puerto 8080
+```
 http://localhost:8080/
+```
 
 *3. MIGRACION CONTENIDO SITIO WP*, anterior 
 
 Una vez, activo el sitio http://localhost:8080/, se configura con usuario y password administrador de worpress.
 
--Se instala el plug-in x, y se va opción import para cargar el archivo mysite-cloud.wpress (previo backup o exportación del sitio anterior wordpresss en cloud)
+-   Se instala el plug-in x, y se va opción import para cargar el archivo mysite-cloud.wpress (previo backup o exportación del sitio anterior wordpresss en cloud)
 
--Se carga archivo mysite-cloud.wpress, donde se comprueba que la variables de entorno y para ampliar configuración de PHP (archivos entrypoint y php.ini), se ejecutaron y serán persistentes en el despliegue de los contenedores docker de esta solución.
+-   Se carga archivo mysite-cloud.wpress, donde se comprueba que la variables de entorno y para ampliar configuración de PHP (archivos entrypoint y php.ini), se ejecutaron y serán persistentes en el despliegue de los contenedores docker de esta solución.
 
 Quedando migrado el sitio deplegado en contenedores en este caso, en ambiente localhost 
 
 **Adicionales:**
 
-1. Comandos usados:  en la practica de las dos implementaciones 
-
-##Para1 tipo implementación:
+*1. Comandos usados:*  en la practica de las dos implementaciones 
 
 #crear RED de Docker:
+```
 > docker network create mysitewp-network
 > docker network list
-
+```
 #Crear imágenes, se ubica en cada directorio del proyecto 
-> docker build -t ima-mysite-db .     # para BASE DATOS
-> docker build -t ima-mysite-wp .    # para APP WORDPRESS
-
+```
+# para BASE DATOS
+docker build -t ima-mysite-db .  
+# para APP WORDPRESS   
+> docker build -t ima-mysite-wp .    
+```
 #Crear o correr los contenedores con todos los parámetros
 # para BASE DATOS
-
+```
 > docker run -d \
   --name bases-de-datos \
   --network mysitewp-network \
@@ -105,9 +109,9 @@ Quedando migrado el sitio deplegado en contenedores en este caso, en ambiente lo
   -e MYSQL_PASSWORD=wppassword \
   -p 3306:3306 \
   ima-mysite-db
-
+```
 # para APP WORDPRESS
-
+```
 > docker run -d \
   --name wordpress \
   --network mysitewp-network \
@@ -119,22 +123,23 @@ Quedando migrado el sitio deplegado en contenedores en este caso, en ambiente lo
   -v $(pwd)/wordpress/entrypoint.sh:/usr/local/bin/entrypoint.sh \
   -v $(pwd)/wordpress/php.ini:/usr/local/etc/php/conf.d/custom.ini \
   ima-mysite-wp
-
+```
 ##Para 2 tipo implementación
 
 #Ejecutar solo docker-compose, que se basa en lo dockerfile creados anteriormente para Bases de datos/aplicación wordpres
 
 > docker-compose up -d
 
-2. Gestion en consola OrbStack (engine de docker):
+*2. Gestion en consola OrbStack (engine de docker):*
 
-*Se observa los CONTENEDORES con su información
+-   Se observa los CONTENEDORES con su información
+-   Se observa los VOLUMENES creados, con opción para exportar la data
+-   Se observa las IMAGENES creadas de los contenedores
 
-Se observa los VOLUMENES creados, con opción para exportar la data
-*Se observa las IMAGENES creadas de los contenedores
-En cansola OrbStack, permite acceder y manipular todos los artefactos (contenedores, imágenes, volúmenes),  creados 
+En consola OrbStack, permite acceder y manipular todos los artefactos (contenedores, imágenes, volúmenes),  creados 
 
-3. Uso y apoyo con Inteligencia Artificial mediante Amazon Q - modelo IA, Claude Sonnet 4. 
+*3. Uso y apoyo con Inteligencia Artificial mediante Amazon Q - modelo IA, Claude Sonnet 4.*
+
 De uso a través de VSCODE.
 
 ### Technical Desing:
