@@ -72,10 +72,10 @@ docker build -t ima-mysite-db .
 
 **B.  Implementando a partir de la ejecución de un archivo docker-compose.yaml** 
 
-En este caso, **se omite este punto. No se necesita crear RED de docker**. En este caso, se realiza a travez de archivo docker-compose.ymal
+En este caso, **se omite este punto. No se necesita crear RED de docker**. En este caso, se realiza a travez de archivo docker-compose.yaml
 
 -   Crear archivo dockerfile BASE DE DATOS(MYSQL) y FRONTEND (PHP -WORDPRESS), por aparte
--   Crear el archivo docker-compose.ymal, el cual define la relacion y la dependencia de los contenedores entre si, para implementar los contenedores 
+-   Crear el archivo docker-compose.yaml, el cual define la relacion y la dependencia de los contenedores entre si, para implementar los contenedores 
 
 ###  Implementation
 
