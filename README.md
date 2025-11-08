@@ -30,7 +30,7 @@ I am a Systems Engineer and a proactive technology professional with strong expe
 ## DEVOPS Skills
 
 - [Script BASH: Gist o snippets](./DEVOPS%20Skills/Script%20BASH:%20Gist%20o%20snippets.md)
-- [AWS-DOCKER: WordPress Website with two methods to deploy in Docker and Content Migration](./DEVOPS%20Skills/WordPress%20Website%20with%20(2)%20methods%20to%20deploy%20in%20Docker%20and%20Content%20Migration.md)
+- [DOCKER: WordPress Website with two methods to deploy in Docker and Content Migration](./DEVOPS%20Skills/WordPress%20Website%20with%20(2)%20methods%20to%20deploy%20in%20Docker%20and%20Content%20Migration.md)
 
 ## Automatations
 
