@@ -1,4 +1,4 @@
-## WordPress Website deployed by IAC-Terraform
+## WordPress Website deployed by IAC-TERRAFORM
 
 ### Objetive:
 El Objetivo de este proyecto, busca crear e implementar un nuevo sitio web Wordpress a travez de IAC (Infraestructura como Codigo) mediante TERRAFORM. Creando contenedores en EC2 para Wordpress.  Posteriormente, migrando contenidos de un sitio WP, anteiror.
@@ -23,7 +23,7 @@ El nuevo sitio web, se despliega mediante IAC-Terraform con la siguiente arquite
 - Opcional: Migración contenidos wordpress mediante importación (uso archivo backup tipo .wpress) de sitio web, anteiror.
 
 **PRE-REQUISITOS:**
-- Acceso a cuenta AWS (ambiente de trabajo) o cuenta AWS(Sandbox)
+- Acceso a cuenta AWS (ambiente de trabajo) 
 - Instalada y cónfigurada AWS CLI (Comand line AWS)
 - Instalación y configuración extensiones TERRAFORM en VSCode
 - Crear una carpeta para proyecto (local) y relacionar como workspace en VSCODE.
@@ -61,7 +61,7 @@ El nuevo sitio web, se despliega mediante IAC-Terraform con la siguiente arquite
         - Se crea el Security Group para ALB, definiendo reglas de entrada para puertos 80 y 443. Y de Salida para internet 
         - Se crea Target Group apuntando a la EC2, creada 
         - Se crea un healthcheck para validar trafico HTTP
-        - Se crea (2)listerner, uno para puerto 80 redireccionado (forwarding) a 443. El otro listener para puerto 443, como tal en protocolo HTTPS y aplicando el ARN (nombre de recurso AWS) del certficado SSL (creado previamente en ACM)
+        - Se crea (2) listerners, uno para puerto 80 redireccionado (forwarding) a 443. El otro listener para puerto 443, como tal en protocolo HTTPS y aplicando el ARN (nombre de recurso AWS) del certficado SSL (creado previamente en ACM)
         - Se selecciona el certificado SSL para dominio personalizado asignando ARN (nombre de recurso AWS) del certficado SSL (creado previamente en ACM)
         - Se atacha el Target Group al Balanceador de aplicación
     - En **submodulo outputs.tf**, se define las salidas de este modulo
@@ -95,7 +95,7 @@ El nuevo sitio web, se despliega mediante IAC-Terraform con la siguiente arquite
     - se invoca el modulo CLOUDFRONT
     - se invoca el modulo ROUTE53
 - En **submodulo outputs.tf**, se define las salidas globales del sitio web
-- En **submodulo variables.tf**, se define las varibles globales de alcancen modulos 
+- En **submodulo variables.tf**, se define las varibles globales de alcance a los modulos. En este caso, se define region y CIDR de VPC
 ```hcl
 variable "region" {
   default = "us-east-1"
@@ -106,15 +106,20 @@ variable "cidr" {
 }
 ```
 **NOTAS:**
-- Se debe configurar el archivo **provider.tf** para definir el proveedor AWS y la región de trabajo
 
-- Previamente en ROUTE53, se habia creado la zona HOST del dominio personalizado, donde genero los registros iniciales de NS (Name Server de AWS) de la zona. Para lo cual, posteriormente, en la pagina o configuracon del proveedor externo (proveedor donde se adquirio el dominio) se actuzaliza los NS dados por AWS, con el fin de desplegar el sitio web final hacia Internet. 
+- Se debe configurar el archivo **provider.tf** para definir el proveedor AWS
+```
+provider "aws" {
+  region  = "us-east-1"
+}
+```
+- Previamente en ROUTE53, se habia creado la zona HOST del dominio personalizado, donde genero los registros iniciales de NS (Name Server de AWS) de la zona. Para lo cual, posteriormente, en la pagina o configuracon del proveedor externo (proveedor donde se adquirio el dominio. Ejemplo: Hostinger), se **actualiza los NS (name server) dados por AWS, con el fin de desplegar el sitio web final hacia Internet.** 
 
-- En ACM, se registro previamente el certificado de servidor seguro SSL para dominio personlaizado. Es decir, se registro del certificado SSL usado en Balanceador y  Distribución en CLOUDFRONT
+- En ACM, se registro previamente el certificado de servidor seguro SSL para dominio personalizado. Es decir, se **registró del certificado SSL usado en BALANCEADOR  y  Distribución en CLOUDFRONT**
 
 - De sitio web anterior, desde aplicacion wordpress, se genera o crea el backup **(archivo mysite-cloud.wpress)**, el cual se usa para migrar contenidos al nuevo sitio WP.
 
-- En caso de despliegue en produccion. se debe cambiar credenciales por defecto antes de usar en producción o configurar secretos.
+- En caso de despliegue en produccion. se debe **cambiar credenciales por defecto antes de usar en producción** o configurar secretos.
 
 ### Final Implementation:
 
@@ -125,8 +130,8 @@ variable "cidr" {
 - Se valida la configuración **terraform validate**
 - Se crea el plan de despliegue **terraform plan**. Se itera varias veces hasta lograr el despligue y  configuracion final, deseada
 - Se aplica el plan de despliegue **terraform apply**
-- Se verifica en coósola AWS, la creación de los recursos y su correcta configuración
-- Una vez, deplegada la infraestructura, se navega al sitio personalizado con protocolo seguro https://misitio.cloud, el cual fue instalado con un wordpress limpio (nueva instalacion wordpres)
+- Se verifica en consola AWS, la creación de los recursos y su correcta configuración
+- Una vez, desplegada la infraestructura, se **navega al sitio personalizado con protocolo seguro https://misitio.cloud**, el cual fue instalado con un wordpress limpio (nueva instalacion wordpres)
 
 **Comandos mas usados**
 ```bash
