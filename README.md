@@ -10,9 +10,9 @@ I am a Systems Engineer and a proactive technology professional with strong expe
 
 -	**Cloud:** AWS Cloud, Core Services
 -	**Databases and CMS:** MS SqlServer, Drupal
--	**Devops Skills :** scripting bash , python, Docker, Ansible, SCE (EC2-FARGATE)
+-	**New Devops Skills :** DEVOPS Best practices, scripting bash , python, Docker, Ansible, Kubernetes, Terraform 
 -	**AI and Automations:** AWS Bedrock, Amazon Q, N8N, Make tools integrate Agents, MCP Server
--	**AWS Security Services:** (VPC, EC2, BLB, CDFRONT, ROU,ACM, AIM, WAF/SHIELD ADV, CLOUDWT, BILL-COST_EXP, CDTRAIL, SECHUB, GDUTY, INSPECT), QSIGHT, CALC PAS-IAS-SAS)
+-	**AWS Security Services:** (VPC, EC2, BLB, CDFRONT, ROU,ACM, AIM, WAF/SHIELD ADV, SCE (EC2-FARGATE), CLOUDWT, BILL-COST_EXP, CDTRAIL, SECHUB, GDUTY, INSPECT), QSIGHT, CALC PAS-IAS-SAS)
 
 ## AWS Cloud Projects
 
