@@ -41,62 +41,62 @@ El nuevo sitio web, se despliega mediante IAC con la siguiente arquitectura, con
 
 - **Modulo VPC:** 
     - En **submodulo main.tf**
-    * Se crea la VPC "Main" definiendo CIDR de red
-    * A nivel de zonas de disponbilidad, se usa  Data source (información del provieder) para buscar la disponbilidad, de las mismas
-    * se crea (2) Subredes publicas, definiendo CIDR, correspondiente
-    * se crea (1) Tabla de Enrutammiento publico y se asocia a la subredes publicas
-    * se crea (1) Internet Gateway y se atacha a la VPC
+        - * Se crea la VPC "Main" definiendo CIDR de red
+        - * A nivel de zonas de disponbilidad, se usa  Data source (información del provieder) para buscar la disponbilidad, de las mismas
+        - * se crea (2) Subredes publicas, definiendo CIDR, correspondiente
+        - * se crea (1) Tabla de Enrutammiento publico y se asocia a la subredes publicas
+        - * se crea (1) Internet Gateway y se atacha a la VPC
     - En **submodulo outputs.tf**, se define las salidas de este modulo
     - En **submodulo variables.tf**, se define las varibles de este modulo
 
 - **Modulo EC2:**
     - En **submodulo main.tf**
-    * Se crea "sts:AssumeRole" para dar acceso seguro y proporcionar Admministración de la EC2 por session Manager
-    * Se crea el Security Group para EC2, definiendo reglas de entrada (puerto 80/22) y salida (puerto 80)
-    * se crea el Security Group para ALB, definiendo reglas de entrada y salida
-    * se crea la instancia EC2, definiendo AMI (en base a archivo userdata.sh), tipo instancia, key pair (antes definida), asociacion a VPC y subredes publicas, asociacion al Security Group de EC2
-    * Se instala Docker y Docker-compose en la instancia EC2 (definido en archivo userdata.sh), dinamicamente
-    * En archivo docker-compose.yml (definido en archivo userdata.sh), se crea y configura los contenedores para MYSQL (wordpress_db) y WORDPRESS (wordpress_app), sus variables de entorno, volumenes y redes
-    * se agrega variables y configuración para el archivo wp-config.php y php.ini para aumentar capacidad de carga de archivos en la aplicacion wordpress
-    * se inicia los contenedores docker (definido en archivo userdata.sh)
+        - * Se crea "sts:AssumeRole" para dar acceso seguro y proporcionar Admministración de la EC2 por session Manager
+        - * Se crea el Security Group para EC2, definiendo reglas de entrada (puerto 80/22) y salida (puerto 80)
+        - * se crea el Security Group para ALB, definiendo reglas de entrada y salida
+         * se crea la instancia EC2, definiendo AMI (en base a archivo userdata.sh), tipo instancia, key pair (antes definida), asociacion a VPC y subredes publicas, asociacion al Security Group de EC2
+        - * Se instala Docker y Docker-compose en la instancia EC2 (definido en archivo userdata.sh), dinamicamente
+        - * En archivo docker-compose.yml (definido en archivo userdata.sh), se crea y configura los contenedores para MYSQL (wordpress_db) y WORDPRESS (wordpress_app), sus variables de entorno, volumenes y redes
+        - * se agrega variables y configuración para el archivo wp-config.php y php.ini para aumentar capacidad de carga de archivos en la aplicacion wordpress
+        - * se inicia los contenedores docker (definido en archivo userdata.sh)
     - En **submodulo outputs.tf**, se define las salidas de este modulo
     - En **submodulo variables.tf**, se define las varibles de este modulo
 
 - **Modulo ABL:**
-En **submodulo main.tf**
-* Se crea security group para el Balanceador de aplicacion
-* Se crea (2) reglas de entrada para puerto 80 y 443
-* Se crea (1) regla de salida para internet 
-* Se crea Target Group apuntando a la EC2, creada 
-* Se crea un healthcheck para validar trafico HTTP
-* Se crea (2)listerner, uno para puerto 80 redireccionado (forwarding) a 443. El otro listener para puerto 443, como tal en protocolo HTTPS y aplicando el ARN (nombre de recurso AWS) del certficado SSL (creado previamente en ACM)
-* Se atacha el Target Group al Balanceador de aplicación
+    - En **submodulo main.tf**
+        - * Se crea security group para el Balanceador de aplicacion
+        - * Se crea (2) reglas de entrada para puerto 80 y 443
+        - * Se crea (1) regla de salida para internet 
+        - * Se crea Target Group apuntando a la EC2, creada 
+        - * Se crea un healthcheck para validar trafico HTTP
+        - * Se crea (2)listerner, uno para puerto 80 redireccionado (forwarding) a 443. El otro listener para puerto 443, como tal en protocolo HTTPS y aplicando el ARN (nombre de recurso AWS) del certficado SSL (creado previamente en ACM)
+        - * Se atacha el Target Group al Balanceador de aplicación
 
-En **submodulo outputs.tf**, se define las salidas de este modulo
-En **submodulo variables.tf**, se define las varibles de este modulo
+    - En **submodulo outputs.tf**, se define las salidas de este modulo
+    - En **submodulo variables.tf**, se define las varibles de este modulo
 
 - **Modulo CLOUDFRONT:**
-En **submodulo main.tf**
-    * Se crea la distribución Cloudfront, definiendo el origen como el ALB, creado
-    * Se define el comportamiento (behaviors) y por defecto para el cache. Se define el viewer protocol policy como redireccion HTTP a HTTPS
-    * Se selecciona el certificado SSL para dominio personalizado asignando ARN (nombre de recurso AWS) del certficado SSL (creado previamente en ACM)
-En **submodulo outputs.tf**, se define las salidas de este modulo
-En **submodulo variables.tf**, se define las varibles de este modul
+    - En **submodulo main.tf**
+        - * Se crea la distribución Cloudfront, definiendo el origen como el ALB, creado
+        - * Se define el comportamiento (behaviors) y por defecto para el cache. Se define el viewer protocol policy como redireccion HTTP a HTTPS
+        - * Se selecciona el certificado SSL para dominio personalizado asignando ARN (nombre de recurso AWS) del certficado SSL (creado previamente en ACM)
+    - En **submodulo outputs.tf**, se define las salidas de este modulo
+    - En **submodulo variables.tf**, se define las varibles de este modul
 
 - **Modulo ROUTE53:** 
-En **submodulo main.tf**
-    * Se crea el registro tipo A, definiendo el nombre de dominio personalizado, donde se relaciona a la ditribucion cloudfront, creada.
-En **submodulo outputs.tf**, se define las salidas de este modulo
-En **submodulo variables.tf**, se define las varibles de este modul
+    - En **submodulo main.tf**
+        - * Se crea el registro tipo A, definiendo el nombre de dominio personalizado, donde se relaciona a la ditribucion cloudfront, creada.
+    - En **submodulo outputs.tf**, se define las salidas de este modulo
+    - En **submodulo variables.tf**, se define las varibles de este modul
 
 2. **A nivel global del proyecto**, se crea los archivos **main.tf, outputs.tf, variables.tf**, en los cuales se invocan los modulos para el depliegue de la infraestructura en AWS.
 
 - En **submodulo main.tf**
-    * se invoca el modulo VPC
-    * se invoca el modulo EC2
-    * se invoca el modulo ALB
-    * se invoca el modulo CLOUDFRONT
-    * se invoca el modulo ROUTE53
+    - * se invoca el modulo VPC
+    - * se invoca el modulo EC2
+    - * se invoca el modulo ALB
+    - * se invoca el modulo CLOUDFRONT
+    - * se invoca el modulo ROUTE53
 - En **submodulo outputs.tf**, se define las salidas globales del sitio web
 - En **submodulo variables.tf**, se define las varibles globales de alcancen modulos 
 
