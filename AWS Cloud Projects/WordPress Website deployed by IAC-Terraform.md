@@ -40,9 +40,9 @@ El nuevo sitio web, se despliega mediante IAC con la siguiente arquitectura, con
 ```
 
 - **Modulo VPC:** 
-    - En **submodulo main.tf**
-        - * Se crea la VPC "Main" definiendo CIDR de red
-        - * A nivel de zonas de disponbilidad, se usa  Data source (información del provieder) para buscar la disponbilidad, de las mismas
+    * En **submodulo main.tf**
+        - Se crea la VPC "Main" definiendo CIDR de red
+        - A nivel de zonas de disponbilidad, se usa  Data source (información del provieder) para buscar la disponbilidad, de las mismas
         - * se crea (2) Subredes publicas, definiendo CIDR, correspondiente
         - * se crea (1) Tabla de Enrutammiento publico y se asocia a la subredes publicas
         - * se crea (1) Internet Gateway y se atacha a la VPC
