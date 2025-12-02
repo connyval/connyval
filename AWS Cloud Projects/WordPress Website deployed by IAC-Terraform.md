@@ -125,7 +125,7 @@ El nuevo sitio web, se despliega mediante IAC con la siguiente arquitectura, con
 - Se loguea a nuevo sitio wordpress https://misitio.cloud/wp-admin.
 - Se va al menu principal WP y seleciona menu PLUGINS (opcion ADD-PLUGINS), se instala y activa el modulo o plug-in **ALL-in-One WP Migration**, que permite importar un archivo tipo backup (mysite-cloud.wpress)  y migrar el contenido del sitio anterior al nuevo sitio desplegado. 
 
-Finalmente, se *implementa el nuevo sitio web Wordpress migrado bajo infraestructura desplegada IAC mediante TERRAFORM, exitosamente!!.
+Finalmente, se **implementa el nuevo sitio web Wordpress migrado bajo infraestructura desplegada IAC mediante TERRAFORM**, exitosamente!!.
 
 **Adicional:**
 **Uso y apoyo de Amazon Q (asistente IA) integrado a VScode** para apoyo en consulta y corrección codificacion para el proyecto TERRAFORM.
