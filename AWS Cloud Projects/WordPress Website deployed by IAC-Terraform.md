@@ -161,4 +161,4 @@ Finalmente, se **implementa el nuevo sitio web Wordpress migrado bajo infraestru
 
 ### Technical Desing:
 
-![Technical Desing](https://ocvpprofessional.cloud/wp-content/uploads/2025/11/WP-docker-Orbstack-AwsQ.png)
+![Technical Desing](https://ocvpprofessional.cloud/wp-content/uploads/2025/12/Websitte-WP-deploy-TERRAFORM.png)
