@@ -20,7 +20,7 @@ I am a Systems Engineer and a proactive technology professional with strong expe
 
 - [Application N8N deployed in docker container](./AWS%20Cloud%20Projects/Application%20N8N%20deployed%20in%20docker%20container.md
 )
-
+- [WordPress Website deployed by IAC-TERRAFORM](./AWS%20Cloud%20Projects/WordPress%20Website%20deployed%20by%20IAC-Terraform.md)
 ## Generative IA
 
 - [MCP Server for IA Chat with Amazon Q Cli / VsCODE improving my DEV journey](./Generative%20IA/MCP%20Server%20for%20IA%20Chat%20with%20Amazon%20Q%20Cli.md)
