@@ -136,7 +136,8 @@ provider "aws" {
 **Comandos mas usados**
 ```bash
 # Inicializar Terraform
-terraform init
+#Con este comando, Terraform crea archivos terrafon.tfstate y carpeta .terraform para control  estado del proyecto e infraestructura deplegada en AWS
+terraform init  
 # ajustar formato
 terraform fmt
 # planear infraestructura
