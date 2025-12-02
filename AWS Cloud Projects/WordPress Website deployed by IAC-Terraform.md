@@ -34,11 +34,6 @@ El nuevo sitio web, se despliega mediante IAC-Terraform con la siguiente arquite
 
 1. **Modulos:** De acuerdo a mejores practicas, se crea el proyecto organizado y estructurado en modulos. En cada modulo se estructura en (3) archivos: **main.tf, outputs.tf y variables.tf**, asi:
 
-```
-> docker network create mysitewp-network
-> docker network list
-```
-
 - **Modulo VPC:** Red privada virtual con subnets públicas
     - En **submodulo main.tf**
         - Se crea la VPC "Main" definiendo CIDR de red
