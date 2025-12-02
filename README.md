@@ -10,9 +10,9 @@ I am a Systems Engineer and a proactive technology professional with strong expe
 
 -	**Cloud:** AWS Cloud, Core Services
 -	**Databases and CMS:** MS SqlServer, Drupal
--	**New Devops Skills :** DEVOPS Best practices, scripting bash , python, Docker, Ansible, Kubernetes, Terraform 
+-	**New Skills :** DEVOPS Best practices, scripting bash , python, Docker, Ansible, Kubernetes, Terraform 
 -	**AI and Automations:** AWS Bedrock, Amazon Q, N8N, Make tools integrate Agents, MCP Server
--	**AWS Security Services:** (VPC, EC2, BLB, CDFRONT, ROU,ACM, AIM, WAF/SHIELD ADV, SCE (EC2-FARGATE), CLOUDWT, BILL-COST_EXP, CDTRAIL, SECHUB, GDUTY, INSPECT), QSIGHT, CALC PAS-IAS-SAS)
+-	**AWS CORE and Security Services:** (VPC, EC2, BLB, CDFRONT, ROU,ACM, AIM, WAF/SHIELD ADV, ECS (EC2-FARGATE), CLOUDWT, BILL-COST_EXP, CDTRAIL, SECHUB, GDUTY, INSPECT), QSIGHT, CALC PAS-IAS-SAS)
 
 ## AWS Cloud Projects
 
@@ -32,7 +32,7 @@ I am a Systems Engineer and a proactive technology professional with strong expe
 - [Script BASH: Gist o snippets](./DEVOPS%20Skills/Script%20BASH:%20Gist%20o%20snippets.md)
 - [DOCKER: WordPress Website with two methods to deploy in Docker and Content Migration](./DEVOPS%20Skills/WordPress%20Website%20with%20(2)%20methods%20to%20deploy%20in%20Docker%20and%20Content%20Migration.md)
 
-## Automatations
+## Automations
 
 - [Extraction data from PDF with AI-powered automated process](./Automatations/Extraction%20data%20from%20PDF%20with%20AI-powered%20automated%20process.md) 
 
