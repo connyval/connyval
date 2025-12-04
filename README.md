@@ -23,7 +23,7 @@ CORE SERVICES-MCP-DOCKER-FARGATE-ECS/ECR-TERRAFORM
 
 - [Website deployed in Docker with AWS ECS-Fargate Service and image Register in ECR](https://github.com/connyval/Project-ECR_ECS_FARGATE)
 
-- [WordPress Website deployed by IAC-TERRAFORM](./AWS%20Cloud%20Projects/WordPress%20Website%20deployed%20by%20IAC-Terraform.md)
+- [WordPress Website deployed by IAC-TERRAFORM](https://github.com/connyval/2025_TF_SiteWP)
 
 ## Generative IA
 AI ASSISTANT-MCP-AMAZON Q-BEDROCK-VSCODE-N8N
