@@ -15,25 +15,30 @@ I am a Systems Engineer and a proactive technology professional with strong expe
 -	**AWS CORE and Security Services:** (VPC, EC2, BLB, CDFRONT, ROU,ACM, AIM, WAF/SHIELD ADV, ECS (EC2-FARGATE), CLOUDWT, BILL-COST_EXP, CDTRAIL, SECHUB, GDUTY, INSPECT), QSIGHT, CALC PAS-IAS-SAS)
 
 ## AWS Cloud Projects
+CORE SERVICES-MCP-DOCKER-FARGATE-ECS/ECR-TERRAFORM
 
 - [Professional Website](./AWS%20Cloud%20Projects/Professional%20Website.md)
 
-- [Application N8N deployed in docker container](./AWS%20Cloud%20Projects/Application%20N8N%20deployed%20in%20docker%20container.md
-)
+- [Application N8N deployed in docker container](./AWS%20Cloud%20Projects/Application%20N8N%20deployed%20in%20docker%20container.md)
+
+- [Website deployed in Docker with AWS ECS-Fargate Service and image Register in ECR](https://github.com/connyval/Project-ECR_ECS_FARGATE)
+
 - [WordPress Website deployed by IAC-TERRAFORM](./AWS%20Cloud%20Projects/WordPress%20Website%20deployed%20by%20IAC-Terraform.md)
+
 ## Generative IA
+AI ASSISTANT-MCP-AMAZON Q-BEDROCK-VSCODE-N8N
 
 - [MCP Server for IA Chat with Amazon Q Cli / VsCODE improving my DEV journey](./Generative%20IA/MCP%20Server%20for%20IA%20Chat%20with%20Amazon%20Q%20Cli.md)
 
 - [AI Assistant in VsCODE integrated with AWS Bedrock](./Generative%20IA/AI%20Assistant%20in%20VsCODE%20integrated%20with%20AWS%20Bedrock.md))
 
 ## DEVOPS Skills
-
+BASH-DEVOPs-DOCKER
 - [Script BASH: Gist o snippets](./DEVOPS%20Skills/Script%20BASH:%20Gist%20o%20snippets.md)
 - [DOCKER: WordPress Website with two methods to deploy in Docker and Content Migration](./DEVOPS%20Skills/WordPress%20Website%20with%20(2)%20methods%20to%20deploy%20in%20Docker%20and%20Content%20Migration.md)
 
 ## Automations
-
+AI MODELS-MAKE
 - [Extraction data from PDF with AI-powered automated process](./Automatations/Extraction%20data%20from%20PDF%20with%20AI-powered%20automated%20process.md) 
 
 - [Automations process and IA Generative Tools as a MAKE](./Automatations/Automations%20process%20and%20IA%20Generative%20Tools%20as%20a%20MAKE.md)
